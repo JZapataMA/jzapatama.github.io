@@ -64,15 +64,14 @@ nav a{
     color: rgb(255, 255, 255);
     margin-left: 4rem;
     font-weight: 500;
-    transition: 1s ease;
+    transition: 0.8s ease;
     border-bottom: 3px solid transparent;
-
 }
 
-nav a:hover
+nav a:hover,
 nav a.active{
-    color:#ffffff;
-    border-bottom: 3px solid#ffffff;
+    color:#6b0086;
+    border-bottom: 3px solid#6b0086;
 }
 
 @media(max-width: 995px){
@@ -100,14 +99,14 @@ nav a.active{
     }
     nav a:hover,
     nav a.active{
-        padding: 1rem;
+        color : #6b0086;
+        border-bottom: 0.5rem solid #6b0086;
         border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #00923d;
     }
 }
 
 section{
-    min-height: 100vs;
+    min-height: 100vh;
     padding: 5rem 9% 5rem;
 }
 
@@ -117,8 +116,19 @@ section{
     align-items: center;
     gap:8rem;
     background-color: #000000;
+    padding: 5rem 9%;
     color: #ffffff;
+    min-height: 100vh;
 
+}
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+    
 }
 
 .home-content h1{
@@ -132,14 +142,16 @@ span{
 }
 
 .home-content h3{
-    font-size: 5rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
     font-weight: 700;
 }
 
 .home-content p{
-    font-size: 2rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: 700;
 }
 
 .listado{
@@ -157,49 +169,107 @@ span{
 .home-img img{
     position: relative;
     width: 32vw;
-}
-
- 
-
-
-/* CIRCULO PARA IMAGENES */
-.centered-box {
-    max-width: 600px;
-    margin: 300 auto;
-    padding: 20px;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* Contenedor para las dos columnas */
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap-reverse; /* Para que las columnas se ajusten en pantallas pequeñas */
-}
-
-/* Columna para la imagen */
-.about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-/* Columna para el texto */
-.about-text {
-    flex: 2;
-}
-
-/* Círculo para imágenes */
-.circular-image {
-    width: 100%;
-    max-width: 350px; /* Ajusta el tamaño máximo según sea necesario */
-    height: auto;
     border-radius: 50%;
-    border: 2.5px solid #000000;
-    display: block;
-    margin: 10% auto;
+    box-shadow: 1 0 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: 1ms ease;
 }
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    border: 0.2rem solid #ffffff;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.5s ease;
+}
+
+.social-icons a:hover{
+    color: #ffffff;
+    transform: scale(1.3) translateY(-5px);
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color:  black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: solid 0.2rem #ffffff;
+}
+
+.btn:hover{
+    background-color: #6b0086;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+
+.typing-text{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    min-width: 500px;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: 'Data Scientist';
+    position: absolute;
+    color: #6b0086;
+    animation: words 5s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: #000000;
+    width: -auto;
+    height: 100%;
+    border-right: 3px solid #000000;
+    left: 85%;
+    animation: cursor 0.7s infinite;
+    position: relative;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #6b0086;
+    }
+}
+
+@keyframes words{
+    0%, 33%{
+        content:"Data Scientist";
+    }
+    34%, 66%{
+        content:"Data Analyst";
+    }
+    67%, 100%{
+        content:"Machine Learning Engineer";
+    }
+}
+
+
