@@ -216,13 +216,15 @@ span{
     transition: 0.2s ease;
     cursor: pointer;
     border: solid 0.2rem #000000;
+    text-decoration: none;
+    text-align: center
 }
 
 .btn:hover{
     background-color: #6b0086;
     color: #ffffff;
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    transform: scale(1.0005);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 
