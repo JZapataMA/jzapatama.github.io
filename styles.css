@@ -13,13 +13,14 @@
 
 html{
     font-size: 62.5%;
+    overflow: auto;
 } 
 
 body{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    background-color: #ffffff;
+    overflow: auto;
+    background-color: #000000;
     color: #000000;
 }	
 
@@ -76,15 +77,17 @@ nav a.active{
 
 @media(max-width: 995px){
     nav{
+        
         position: absolute;
-        top: 100%;
+        display: none;
+        top: 0%;
         right: 0;
         width: 40%;
-        border-left: 3px solid #000000;
-        border-bottom: 3px solid #000000;
+        border-left: 3px solid #6b0086;
+        border-bottom: 3px solid #6b0086;
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
-        background-color: black;
+        background-color: rgb(0, 0, 0);
         border-top:0.1rem, solid #000000;
     }
 
@@ -108,6 +111,7 @@ nav a.active{
 section{
     min-height: 100vh;
     padding: 5rem 9% 5rem;
+    box-sizing: border-box;
 }
 
 .home{
@@ -138,7 +142,7 @@ section{
 }
 
 span{
-    color: #360030;
+    color: #6b0086;
 }
 
 .home-content h3{
@@ -209,9 +213,9 @@ span{
     color: #ffffff;
     letter-spacing: 0.3rem;
     font-weight: 600;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
     cursor: pointer;
-    border: solid 0.2rem #ffffff;
+    border: solid 0.2rem #000000;
 }
 
 .btn:hover{
@@ -286,7 +290,26 @@ span{
 }
 
 .home-content h3{
-    font-size: 2.5rem;.
+    font-size: 2.5rem;
 }
 
+.home-content p{
+    font-size: 1.3rem;
+} 
+
+.home-contet h1{
+    font-size: 5rem;
+}
+.home-img img{
+    width: 50vw;
+    margin-top: 4rem;
+}
+}
+
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 5rem 9%;
+    text-align: center;
 }
