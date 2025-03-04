@@ -12,6 +12,9 @@
   <!-- Encabezado -->
   <header>
     <a href="index.html" class="logo">JZMA</a>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="proyectos.html">Proyectos</a>
@@ -21,14 +24,58 @@
   </header>
 
   <section class="home">
-      <embed src="me/cv/CV_English.pdf" type="application/pdf" width="100%" height="1150px" />
-    </section>
-
-    <div class ="btn">
-    <!-- Botón para descargar el CV -->
-    <a href="me/cv/CV_English.pdf" download class="btn">Descargar CV</a>
+    <div class="language-selector">
+        <a href="#english" class="active-lang" id="en-btn">English</a> | 
+        <a href="#spanish" id="es-btn">Español</a>
+    </div>
+    
+    <div id="english-cv" class="cv-display">
+        <embed src="tex/cveng.pdf" type="application/pdf" width="90%" height="800px" />
+    </div>
+    
+    <div id="spanish-cv" class="cv-display" style="display:none;">
+        <embed src="tex/cvesp.pdf" type="application/pdf" width="90%" height="800px" />
     </div>
 
+    <div class="btn-container">
+        <a href="tex/cveng.pdf" download class="btn" id="en-download">Download CV (English)</a>
+        <a href="tex/cvesp.pdf" download class="btn" id="es-download" style="display:none;">Descargar CV (Español)</a>
+    </div>
+</section>
+
+<script>
+    document.getElementById('en-btn').addEventListener('click', function() {
+        document.getElementById('english-cv').style.display = 'block';
+        document.getElementById('spanish-cv').style.display = 'none';
+        document.getElementById('en-download').style.display = 'inline-block';
+        document.getElementById('es-download').style.display = 'none';
+        this.classList.add('active-lang');
+        document.getElementById('es-btn').classList.remove('active-lang');
+    });
+    
+    document.getElementById('es-btn').addEventListener('click', function() {
+        document.getElementById('english-cv').style.display = 'none';
+        document.getElementById('spanish-cv').style.display = 'block';
+        document.getElementById('en-download').style.display = 'none';
+        document.getElementById('es-download').style.display = 'inline-block';
+        this.classList.add('active-lang');
+        document.getElementById('en-btn').classList.remove('active-lang');
+    });
+</script>
+
+
+<script>
+  document.querySelector('.menu-btn').addEventListener('click', function() {
+      document.querySelector('nav').classList.toggle('active');
+  });
+  
+  // Cerrar menú cuando se hace clic en un enlace
+  document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function() {
+          document.querySelector('nav').classList.remove('active');
+      });
+  });
+</script>
 
     <!-- Pie de página -->
     <footer class="footer">

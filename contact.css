@@ -196,23 +196,53 @@ span{
     box-shadow: 0 0 25px rgba(107, 0, 134, 0.5);
 }
 
-.social-icons a{
-    display: inline-flex;
+/* Corrige los estilos de los iconos sociales */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    display: flex;           /* Cambiado de inline-flex a flex */
     justify-content: center;
     align-items: center;
     width: 5rem;
     height: 5rem;
     background-color: transparent;
-    border: 0.2rem solid #ffffff;
-    font-size: 2rem;
+    border: 0.2rem solid #6b0086;
     border-radius: 50%;
-    margin: 3rem 1.5rem 3rem;
-    transition: 0.5s ease;
+    margin: 2rem 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;  /* Asegura que no haya subrayado */
 }
 
-.social-icons a:hover{
-    color: #ffffff;
+.social-icons a i {
+    font-size: 2rem;
+    color: #6b0086;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    border-color: #ffffff;
     transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 15px rgba(107, 0, 134, 0.5);
+}
+
+
+.social-icons a:hover i {
+    color: #ffffff;
+}
+
+
+@media (max-width: 768px) {
+    .social-icons a {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.8rem;
+        margin: 2rem 1rem;
+    }
 }
 
 
@@ -493,3 +523,87 @@ footer{
         text-align: center;
     }
 }
+
+/* Estilos para el formulario de contacto */
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #ffffff;
+  }
+  
+  .contact-container h2 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .contact-form {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(107, 0, 134, 0.3);
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.6rem;
+    color: #ffffff;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #6b0086;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1.6rem;
+    transition: all 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px rgba(107, 0, 134, 0.5);
+  }
+  
+  .contact-info {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .contact-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #6b0086;
+  }
+  
+  /* Responsive design para el formulario */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 10px;
+    }
+    
+    .contact-form {
+      padding: 20px;
+    }
+  }

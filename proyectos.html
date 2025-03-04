@@ -12,6 +12,9 @@
   <!-- Encabezado -->
   <header>
     <a href="index.html" class="logo">JZMA</a>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
     <nav>
         <a href="index.html">Inicio</a>
         <a href="proyectos.html" class="active">Proyectos</a>
@@ -23,6 +26,20 @@
   <section class="home">
 En construcción :D
   </section>
+
+
+  <script>
+    document.querySelector('.menu-btn').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('active');
+    });
+    
+    // Cerrar menú cuando se hace clic en un enlace
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            document.querySelector('nav').classList.remove('active');
+        });
+    });
+</script>
 
 
     <!-- Pie de página -->
