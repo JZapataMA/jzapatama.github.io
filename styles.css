@@ -403,7 +403,7 @@ footer{
 
 .language-selector {
     text-align: center;
-    margin-top: 2rem;
+    margin: 2rem 0;
     font-size: 1.8rem;
 }
 
@@ -411,26 +411,35 @@ footer{
     color: #ffffff;
     padding: 5px 10px;
     transition: 0.3s ease;
+    text-decoration: none;
 }
 
 .active-lang {
     color: #6b0086 !important;
     font-weight: bold;
-}
+}   
 
 .cv-display {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    margin-top: 1rem;
-    width: 100%;
+    margin: 2rem 0;
 }
 
 .cv-display embed {
     max-width: 100%;
     height: auto;
     min-height: 800px;
+}
+
+.pdf-viewer {
+    width: 90%;
+    height: 80vh; /* Altura relativa al viewport */
+    min-height: 600px; /* Altura mínima */
+    max-height: 1000px; /* Altura máxima opcional */
+    border: none;
+    box-shadow: 0 0 15px rgba(107, 0, 134, 0.3);
 }
 
 /* Add this for the download buttons container */
@@ -488,6 +497,10 @@ footer{
     .cv-display embed {
         width: 100%;
         height: 600px;
+    }
+    .pdf-viewer {
+        width: 100%;
+        height: 70vh;
     }
 }
 
