@@ -75,6 +75,55 @@ nav a.active{
     border-bottom: 3px solid#6b0086;
 }
 
+.listado{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    header {
+        padding: 1rem 5%;
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    body {
+        font-size: 1.4rem;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+        margin-left: 2rem;
+    }
+
+    .typing-text {
+        font-size: 2rem;
+        margin-left: 2rem;
+    }
+    p{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .listado{
+        font-size: 1.3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+
 @media(max-width: 995px){
     nav{
         
