@@ -1,6 +1,6 @@
-tex\cveng.aux
-tex\cvesp.aux
-tex\cveng.log
-tex\cvesp.log
-tex\cveng.tex
-tex\cvesp.tex
+# Archivos auxiliares de LaTeX
+tex/*.aux
+tex/*.log
+
+# Archivos fuente de LaTeX
+**/*.tex
