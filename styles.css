@@ -218,7 +218,7 @@ span{
 
 @media (min-width: 768px) {
     .listado {
-        flex-direction: row; /* Volver a fila en pantallas más grandes */
+        flex-direction: row;
         gap: 2rem;
     }
 }
@@ -227,8 +227,6 @@ span{
     border-radius: 50%;
 }
 
-
-/* ELIMINAR ESTE CIERRE DE LLAVE EXTRA */
 .home-img img{
     position: relative;
     width: 25vw;
@@ -302,10 +300,10 @@ span{
     height: 4.5rem; 
 }
 
-.typing-text span{
-    position: flex;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.typing-text span {
+    position: relative;
+    display: inline-block;
+    margin: 0;
 }
 
 .typing-text span::before{
@@ -367,7 +365,7 @@ span{
     }
 
     .home-img img {
-        width: 10vw;
+        width: 40vw;
         margin-top: 4rem;
     }
 
@@ -541,7 +539,9 @@ footer{
         background-color: rgba(0, 0, 0, 0.95);
         padding: 2rem;
         transition: 0.5s ease;
-        border-left: 3px solid #6b0086;
+        border-left: 1px solid #ffffff;
+        border-top: 1px solid #ffffff;
+        transition: 1ms ease;
     }
     
     nav.active {
@@ -553,5 +553,52 @@ footer{
         margin: 2rem 0;
         font-size: 2rem;
         text-align: center;
+    }
+}
+
+
+/* Añade estos estilos a tu styles.css */
+.pdf-desktop {
+    display: block;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+}
+
+.pdf-mobile {
+    display: none;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.pdf-mobile p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.mobile-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mobile-options .btn {
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .pdf-desktop {
+        display: none; /* Oculta el PDF incrustado en móviles */
+    }
+    
+    .pdf-mobile {
+        display: block; /* Muestra la alternativa */
     }
 }
